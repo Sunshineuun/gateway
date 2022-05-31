@@ -1,0 +1,29 @@
+// 参考 RouteDefinition 的结构
+[
+  {
+    "id": "spring-mongo",
+    "predicates": [
+      {
+        "name": "Path",
+        "args": {
+          "_genkey_0": "/mongo/**"
+        }
+      }
+    ],
+    "uri": "lb://spring-mongo",
+    "order": 0
+  },
+  {
+    "id": "spring-mybatis",
+    "predicates": [
+      {
+        "name": "Path",
+        "args": {
+          "_genkey_0": "/mybatis/**"
+        }
+      }
+    ],
+    "uri": "lb://spring-mybatis",
+    "order": 1
+  }
+]

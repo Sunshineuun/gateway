@@ -20,15 +20,26 @@ spring:
         enabled: true
         extension-configs:
           - dataId: common-log.yaml
-            group: limengya
+            #            group: limengya
             refresh: true
-    gateway:
-      routes: # 路由
-        - id: spring-mongo
-          uri: lb://spring-mongo
-          predicates:
-            - Path=/mongo/**
-        - id: spring-mybatis
-          uri: lb://spring-mybatis
-          predicates:
-            - Path=/mybatis/**
+        #          - dataId: spring-gateway-routes.json
+        #            group: limengya
+        #            refresh: true
+        server-addr: ${spring.cloud.nacos.server-addr}
+        namespace: f21c91fb-a3a9-4c1b-9034-99b5d59910f8
+        group: limengya
+#    gateway:
+#      routes: # 路由
+#        - id: spring-mongo
+#          uri: lb://spring-mongo
+#          predicates:
+#            - Path=/mongo/**
+#        - id: spring-mybatis
+#          uri: lb://spring-mybatis
+#          predicates:
+#            - Path=/mybatis/**
+# 动态路由dataId配置
+config:
+  dynamic:
+    route:
+      dataId: spring-gateway-routes.json

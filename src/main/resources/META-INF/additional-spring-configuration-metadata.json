@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "config.dynamic.route.group",
+      "type": "java.lang.String",
+      "description": "配置动态配置的group."
+    },
+    {
+      "name": "config.dynamic.route.dataId",
+      "type": "java.lang.String",
+      "description": "配置动态配置的dataId."
+    }
+  ]
+}
