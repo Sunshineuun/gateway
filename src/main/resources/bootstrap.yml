@@ -43,3 +43,4 @@ config:
   dynamic:
     route:
       dataId: spring-gateway-routes.json
+debug: true
